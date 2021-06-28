@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking Club</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <section id="home">
+      <nav>
+        <img src="images/logo.png" alt="">
+
+        <div class="hamburger">
+          <div class="burgerline"></div>
+          <div class="burgerline"></div>
+          <div class="burgerline"></div>
+        </div>
+
+        <ul>
+          <li> <a href="#">Home</a> </li>
+          <li> <a href="#">Upcoming Treks</a> </li>
+          <li> <a href="#">Treks for Family</a> </li>
+          <li> <a href="#">Contact us</a> </li>
+        </ul>
+      </nav>
+
+      <div class="main">
+        <h2>Climb for better</h2>
+        <h1>Get out now</h1>
+        <h3>Join us for the weeekend to climb <br>the highest peak in England</h3>
+        <a href="#">View Upcoming treks</a>
+      </div>
+
+      <div class="butterfly1"></div>
+      <div class="butterfly2"></div>
+
+    </section>
+
+    <section id="upcoming">
+      <h2>Choose</h2>
+      <h2>These Best <br>Terks For Spring </h2>
+      <div class="up-terks">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo viverra maec  enas accumsan lacus vel facilisis incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo viverra maec  enas accumsan lacus vel facilisis. </p>
+        <div class="terks">
+          <img onclick="prevTrek()" class="back" src="images/back.svg" alt="">
+          <img class="terk-img" src="images/terk2.png" alt="">
+          <img onclick="nextTrek()" class="next" src="images/next.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="family">
+      <h2>Choose</h2>
+      <h2>These Best <br>Terks For Family </h2>
+      <div class="family-terks">
+        <div class="fam-terks">
+          <img onclick="prevTrek()" class="back" src="images/back.svg" alt="">
+          <img class="fam-terk-img" src="images/terk3.png" alt="">
+          <img onclick="nextTrek()" class="next" src="images/next.svg" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo viverra maec  enas accumsan lacus vel facilisis incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo viverra maec  enas accumsan lacus vel facilisis. </p>
+      </div>
+    </section>
+
+    <!-- <section id="bg1">
+      <h1>We’re Largest & Safest <br>Hiking Organisation</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua. </p>
+    </section> -->
+
+    <section id="last">
+      <img src="images/bg1.png" alt="">
+      <div class="text-part">
+        <h1>Want To Stay In Touch <br>With The Hiking World?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+        <a href="#">Yes, Keep me posted</a>
+      </div>
+    </section>
+
+    <div class="wave"></div>
+
+    <section id="footer">
+
+      <div class="bottom-footer">
+        <h1> Call Now <br>1800 888 555 </h1>
+        <p>© Company Hiking Club 2020. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"> f </a>
+          <a href="#"> t </a>
+          <a href="#"> i </a>
+        </div>
+      </div>
+
+    </section>
+
+    <script type="text/javascript">
+      document.querySelector(".hamburger").addEventListener("click", function(){
+        document.querySelector("nav ul").classList.toggle("res-nav");
+      });
+
+      function nextTrek(){
+        if(document.querySelector(".terk-img").getAttribute("src") === "images/terk2.png"){
+          document.querySelector(".terk-img").style.animation = "nextAnim 1s ease";
+          document.querySelector(".terk-img").setAttribute("src", "images/terk3.png");
+          setTimeout(function(){
+            document.querySelector(".terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".terk-img").getAttribute("src") === "images/terk3.png"){
+          document.querySelector(".terk-img").style.animation = "nextAnim 1s ease";
+          document.querySelector(".terk-img").setAttribute("src", "images/terk1.png");
+          setTimeout(function(){
+            document.querySelector(".terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".terk-img").getAttribute("src") === "images/terk1.png"){
+          document.querySelector(".terk-img").style.animation = "nextAnim 1s ease";
+          document.querySelector(".terk-img").setAttribute("src", "images/terk2.png");
+          setTimeout(function(){
+            document.querySelector(".terk-img").style.animation = "";
+          }, 1000);
+        }
+        if(document.querySelector(".fam-terk-img").getAttribute("src") === "images/terk2.png"){
+          document.querySelector(".fam-terk-img").style.animation = "nextAnim 1s ease";
+          document.querySelector(".fam-terk-img").setAttribute("src", "images/terk3.png");
+          setTimeout(function(){
+            document.querySelector(".fam-terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".fam-terk-img").getAttribute("src") === "images/terk3.png"){
+          document.querySelector(".fam-terk-img").style.animation = "nextAnim 1s ease";
+          document.querySelector(".fam-terk-img").setAttribute("src", "images/terk1.png");
+          setTimeout(function(){
+            document.querySelector(".fam-terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".fam-terk-img").getAttribute("src") === "images/terk1.png"){
+          document.querySelector(".fam-terk-img").style.animation = "nextAnim 1s ease";
+          document.querySelector(".fam-terk-img").setAttribute("src", "images/terk2.png");
+          setTimeout(function(){
+            document.querySelector(".fam-terk-img").style.animation = "";
+          }, 1000);
+        }
+      }
+
+      function prevTrek(){
+        if(document.querySelector(".terk-img").getAttribute("src") === "images/terk2.png"){
+          document.querySelector(".terk-img").style.animation = "prevAnim 1s ease";
+          document.querySelector(".terk-img").setAttribute("src", "images/terk1.png");
+          setTimeout(function(){
+            document.querySelector(".terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".terk-img").getAttribute("src") === "images/terk3.png"){
+          document.querySelector(".terk-img").style.animation = "prevAnim 1s ease";
+          document.querySelector(".terk-img").setAttribute("src", "images/terk2.png");
+          setTimeout(function(){
+            document.querySelector(".terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".terk-img").getAttribute("src") === "images/terk1.png"){
+          document.querySelector(".terk-img").style.animation = "prevAnim 1s ease";
+          document.querySelector(".terk-img").setAttribute("src", "images/terk3.png");
+          setTimeout(function(){
+            document.querySelector(".terk-img").style.animation = "";
+          }, 1000);
+        }
+        if(document.querySelector(".fam-terk-img").getAttribute("src") === "images/terk2.png"){
+          document.querySelector(".fam-terk-img").style.animation = "prevAnim 1s ease";
+          document.querySelector(".fam-terk-img").setAttribute("src", "images/terk1.png");
+          setTimeout(function(){
+            document.querySelector(".fam-terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".fam-terk-img").getAttribute("src") === "images/terk3.png"){
+          document.querySelector(".fam-terk-img").style.animation = "prevAnim 1s ease";
+          document.querySelector(".fam-terk-img").setAttribute("src", "images/terk2.png");
+          setTimeout(function(){
+            document.querySelector(".fam-terk-img").style.animation = "";
+          }, 1000);
+        }
+        else if(document.querySelector(".fam-terk-img").getAttribute("src") === "images/terk1.png"){
+          document.querySelector(".fam-terk-img").style.animation = "prevAnim 1s ease";
+          document.querySelector(".fam-terk-img").setAttribute("src", "images/terk3.png");
+          setTimeout(function(){
+            document.querySelector(".fam-terk-img").style.animation = "";
+          }, 1000);
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
